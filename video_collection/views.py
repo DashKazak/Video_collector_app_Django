@@ -60,7 +60,7 @@ def video_list(request):
         videos = Video.objects.order_by('name')
     return render(request, 'video_collection/video_list.html', {'videos': videos, 'search_form': search_form})
 
-def video_info(request):
+def video_info(request, #here should be the second argument):
     #on the video form, each video has a video ID from the url
 
 
