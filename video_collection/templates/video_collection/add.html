@@ -1,0 +1,16 @@
+{% extends 'video_collection/base.html' %}
+{% block content %}
+<h2> Add new video </h2>
+{% for message in messages %}
+    <li>{{message}}</li>
+{% endfor %}
+<!-- displaying the form -->
+<form method = 'POST' action = "{% url 'add_video' %}">
+    <!-- urls.py connects this with the view.py -->
+    {% csrf_token %}
+    {{ new_video_form }}
+    <!-- Django does not provide button elements in forms -->
+    <button type="submit">Add video</button>
+
+</form>
+{% endblock %}

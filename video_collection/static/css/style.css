@@ -1,0 +1,13 @@
+body{
+    background-color: lightblue;
+}
+
+.nav{
+    margin:40px;
+
+}
+
+.nav >a {
+    color: sandybrown;
+    padding: 50px;
+}
